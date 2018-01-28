@@ -6,11 +6,11 @@
 * Hacer funcionar el giroscopio. [Done]
 * Metodo de visualizacion. [Done]
 * Implementar modelo de control (PID). []
-    * Investigar modelos de control. []
+    * Investigar modelos de control.
 * Hacer funcionar motores y ESC's. []
-* Rediseñar chasis. []
+* Rediseñar chasis y fabricar chasis. []
 * Diseñar PCB y fabricarla. []
-* Hacer pruebas de vuelo. []
+* Hacer pruebas de vuelo y calibrar PID. []
 
 ### Hardware utilizado
 

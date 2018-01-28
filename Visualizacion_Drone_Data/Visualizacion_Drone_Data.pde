@@ -189,8 +189,30 @@ void drawRotationCube(int x, int y)
   pgRotationCube.rotateX(radians(pyrValues[0][actualSample-1]));
   pgRotationCube.rotateZ(radians(pyrValues[1][actualSample-1])); 
   pgRotationCube.rotateY(radians(pyrValues[2][actualSample-1]));
+
+  float R = pgRotationCube.width;
+  float r = R / 5;
+  float h = R / 10;
+
+  pgRotationCube.stroke(0);
+  pgRotationCube.fill(255);
+  pgRotationCube.beginShape(TRIANGLE_FAN);
+  pgRotationCube.vertex(0, -h, -r * .8);
+  for (int i = 0; i <= 4; i++) {
+    pgRotationCube.vertex(r * cos(HALF_PI * i), 0, r * sin(HALF_PI * i));
+    pgRotationCube.vertex(R * cos(HALF_PI * (i + .5)), 0, R * sin(HALF_PI * (i + .5)));
+  }
+  pgRotationCube.endShape(CLOSE);
   pgRotationCube.fill(255, 0, 0);
-  pgRotationCube.box(pgRotationCube.width);
+  pgRotationCube.beginShape(TRIANGLE_FAN);
+  pgRotationCube.vertex(0, h, -r * .8);
+  for (int i = 0; i <= 4; i++) {
+    pgRotationCube.vertex(r * cos(HALF_PI * i), 0, r * sin(HALF_PI * i));
+    pgRotationCube.vertex(R * cos(HALF_PI * (i + .5)), 0, R * sin(HALF_PI * (i + .5)));
+  }
+  pgRotationCube.endShape(CLOSE);
+  
+  
   pgRotationCube.endDraw();
   image(pgRotationCube, x, y);
 }

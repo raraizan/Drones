@@ -20,6 +20,12 @@ float pitch = 0;
 float roll = 0;
 float yaw = 0;
 
+// Integral values of Pitch, Roll and Yaw for PID
+
+float Ipitch = 0;
+float Iroll = 0;
+float Iyaw = 0;
+
 int LED = 13;
 boolean Blink = false;
 
@@ -50,8 +56,7 @@ void setup()
 
   // Calibrate gyroscope. The calibration must be at rest.
   // If you don't want calibrate, comment this line.
-  gyroscope.calibrate(1000);
-//  gyroscope.setThreshold(1000);
+  gyroscope.calibrate(100);
 
   digitalWrite(LED, LOW);
 }
@@ -67,6 +72,11 @@ void loop()
   pitch = pitch + norm.YAxis * timeStep;
   roll = roll + norm.XAxis * timeStep;
   yaw = yaw + norm.ZAxis * timeStep;
+
+  // Calculate Pitch, Roll and Yaw
+  Ipitch = Ipitch + pitch * timeStep;
+  Iroll = Iroll + roll * timeStep;
+  Iyaw = Iyaw + yaw * timeStep;
 
   // Output raw
   Serial.print(norm.XAxis);
