@@ -1,5 +1,16 @@
 # Al infinito y mas alla en un Drone
-##### Estatus actual: No funcional
+##### Estatus actual: No funcional (28/01/18)
+
+### Objetivos
+
+* Hacer funcionar el giroscopio. []
+* Metodo de visualizacion. []
+* Implementar modelo de control (PID). []
+    * Investigar modelos de control. []
+* Hacer funcionar motores y ESC's. []
+* Rediseñar chasis. []
+* Diseñar PCB y fabricarla. []
+* Hacer pruebas de vuelo. []
 
 ### Hardware utilizado
 
@@ -9,9 +20,10 @@ Giroscopio de 3 ejes. Se utiliza la libreria [L3G4200D.h](https://github.com/jar
 
 
 
-### Estado del proyecto
+### Bitacora
 
 * [27/01/18] Control de sensores (Giroscopio)
 
-    * busqueda de informacion e implementacion de la libreria [L3G4200D.h](https://github.com/jarzebski/Arduino-L3G4200D)
-    * 
+    * Busqueda de informacion e implementacion de la libreria [L3G4200D.h](https://github.com/jarzebski/Arduino-L3G4200D).
+    * Se modificaron ejemplos incluidos en la libreria para la lectura y visualizacion de los datos de giroscopio.
+    * Falta mejorar la calibracion (mucho ruido y un drift pequeño en la orientacion).
