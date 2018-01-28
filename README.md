@@ -3,7 +3,7 @@
 
 ### Hardware utilizado
 
-* [Arduino micro](https://store.arduino.cc/usa/arduino-micro)
+* [Arduino micro](https://store.arduino.cc/usa/arduino-micro) [pinout](arduino_micro_pinout.png)
 * [Giroscopio l3g4200d gy-50](https://www.gearbest.com/development-boards/pp_58062.html)
 Giroscopio de 3 ejes. Se utiliza la libreria [L3G4200D.h](https://github.com/jarzebski/Arduino-L3G4200D)
 
