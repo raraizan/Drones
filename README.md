@@ -1,8 +1,8 @@
 # Al infinito y mas alla en un Drone
 ##### Estatus actual:
-No funcional (27/01/18)
-El giroscopio funciona (28/01/18)
-la visualizacion y salida de datos funciona (inplementada en processing)
+ * No funcional (27/01/18)
+ * El giroscopio funciona (28/01/18)
+ * la visualizacion y salida de datos funciona (inplementada en processing)
 
 
 ### Objetivos
@@ -38,3 +38,4 @@ Giroscopio de 3 ejes. Se utiliza la libreria [L3G4200D.h](https://github.com/jar
 ### Indicaciones
 
 * Para instalar la libreria L3G4200D.h, arrastrar la carpeta *libraries* a la carpeta de librerias de arduino.
+* *Visualizacion_drone_data* y *Visualizacion_drone_lite* funcionan solo con el sketch *Gyro*
