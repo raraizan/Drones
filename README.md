@@ -1,5 +1,9 @@
 # Al infinito y mas alla en un Drone
-##### Estatus actual: No funcional (28/01/18)
+##### Estatus actual:
+No funcional (27/01/18)
+El giroscopio funciona (28/01/18)
+la visualizacion y salida de datos funciona (inplementada en processing)
+
 
 ### Objetivos
 
@@ -28,3 +32,9 @@ Giroscopio de 3 ejes. Se utiliza la libreria [L3G4200D.h](https://github.com/jar
     * Busqueda de informacion e implementacion de la libreria [L3G4200D.h](https://github.com/jarzebski/Arduino-L3G4200D).
     * Se modificaron ejemplos incluidos en la libreria para la lectura y visualizacion de los datos de giroscopio.
     * Falta mejorar la calibracion (mucho ruido y un drift pequeño en la orientacion).
+    
+* [28/01/18] Implementar modelo de control
+
+### Indicaciones
+
+* Para instalar la libreria L3G4200D.h, arrastrar la carpeta *libraries* a la carpeta de librerias de arduino.
