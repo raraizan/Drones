@@ -10,7 +10,7 @@
 * Hacer funcionar el giroscopio. [Done]
 * Metodo de visualizacion. [Done]
 * Implementar modelo de control (PID). []
-    * Investigar modelos de control.
+    * Investigar modelos de control. []
 * Hacer funcionar motores y ESC's. []
 * Rediseñar chasis y fabricar chasis. []
 * Diseñar PCB y fabricarla. []
@@ -33,7 +33,10 @@ Giroscopio de 3 ejes. Se utiliza la libreria [L3G4200D.h](https://github.com/jar
     * Se modificaron ejemplos incluidos en la libreria para la lectura y visualizacion de los datos de giroscopio.
     * Falta mejorar la calibracion (mucho ruido y un drift pequeño en la orientacion).
     
-* [28/01/18] Implementar modelo de control
+* [01/02/18] Implementar modelo de control, se trabaja en un sistema PD.
+    
+    * Se utiliza copia de Gyro.ino para implementar PD y trabajar con sketches de processing.
+    
 
 ### Indicaciones
 

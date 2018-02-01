@@ -49,7 +49,7 @@ void setup()
 void loop()
 {
   timer = millis();
-
+  control();
   // Read normalized values
   Vector norm = gyroscope.readNormalize();
 
@@ -74,10 +74,10 @@ void loop()
   // Output indicator
   if (Blink)
   {
-    digitalWrite(LED, HIGH);
+    digitalWrite(LED_BUILTIN, HIGH);
   } else
   {
-    digitalWrite(LED, LOW);
+    digitalWrite(LED_BUILTIN, LOW);
   }
 
   Blink = !Blink;
