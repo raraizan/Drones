@@ -2,7 +2,7 @@
 ##### Estatus actual:
  * No funcional (27/01/18)
  * El giroscopio funciona (28/01/18)
- * la visualizacion y salida de datos funciona (inplementada en processing)
+ * la visualizacion y salida de datos funciona (implementada en processing)
 
 
 ### Objetivos
