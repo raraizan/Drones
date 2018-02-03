@@ -9,6 +9,7 @@
 
 * Hacer funcionar el giroscopio. [Done]
 * Metodo de visualizacion. [Done]
+    * Migrar a python []
 * Implementar modelo de control (PID). []
     * Investigar modelos de control.
 * Hacer funcionar motores y ESC's. []
