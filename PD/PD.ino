@@ -50,6 +50,7 @@ void loop()
 {
   timer = millis();
   control();
+  
   // Read normalized values
   Vector norm = gyroscope.readNormalize();
 
