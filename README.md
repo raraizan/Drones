@@ -9,7 +9,6 @@
 
 * Hacer funcionar el giroscopio. [Done]
 * Metodo de visualizacion. [Done]
-    * Migrar a python []
 * Implementar modelo de control (PID). []
     * Investigar modelos de control. []
 * Hacer funcionar motores y ESC's. []
@@ -31,12 +30,15 @@ Giroscopio de 3 ejes. Se utiliza la libreria [L3G4200D.h](https://github.com/jar
 * [27/01/18] Control de sensores (Giroscopio)
 
     * Busqueda de informacion e implementacion de la libreria [L3G4200D.h](https://github.com/jarzebski/Arduino-L3G4200D).
+    * se utiliza comunicacion digital por medio de I2C ([diagrama](Images/arduino_gyro.png))
     * Se modificaron ejemplos incluidos en la libreria para la lectura y visualizacion de los datos de giroscopio.
     * Falta mejorar la calibracion (mucho ruido y un drift pequeño en la orientacion).
     
 * [01/02/18] Implementar modelo de control, se trabaja en un sistema PD.
     
     * Se utiliza copia de Gyro.ino para implementar PD y trabajar con sketches de processing.
+    
+* [14/02/18]
     
 
 ### Indicaciones

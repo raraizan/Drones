@@ -14,27 +14,24 @@ float yaw = 0;
 
 boolean Blink = false;
 
-void setup() 
-{
+void setup() {
   Serial.begin(115200);
 
   // Initialize L3G4200D
   // Set scale 2000 dps and 400HZ Output data rate (cut-off 50)
-  while (!gyroscope.begin(L3G4200D_SCALE_2000DPS, L3G4200D_DATARATE_400HZ_50))
-  {
+
+  while (!gyroscope.begin(L3G4200D_SCALE_2000DPS, L3G4200D_DATARATE_400HZ_50)) {
     // Waiting for initialization
 
-    if (Blink)
-    {
+    if (Blink) {
       digitalWrite(LED_BUILTIN, HIGH);
-    } else
-    {
+    } else {
       digitalWrite(LED_BUILTIN, LOW);
     }
 
     Blink = !Blink;
 
-    delay(500);
+    delay(255);
   }
 
   digitalWrite(LED_BUILTIN, HIGH);
@@ -43,35 +40,43 @@ void setup()
   // If you don't want calibrate, comment this line.
   gyroscope.calibrate(100);
 
-  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(LED_BUILTIN, HIGH);
 }
 
-void loop()
-{
+void loop() {
   timer = millis();
-  control();
-  
+
   // Read normalized values
-  Vector norm = gyroscope.readNormalize();
+  Vector velocidadAng = gyroscope.readNormalize();
 
   // Calculate Pitch, Roll and Yaw
-  pitch = pitch + norm.YAxis * timeStep;
-  roll = roll + norm.XAxis * timeStep;
-  yaw = yaw + norm.ZAxis * timeStep;
+  pitch = pitch + velocidadAng.YAxis * timeStep;
+  roll = roll + velocidadAng.XAxis * timeStep;
+  yaw = yaw + velocidadAng.ZAxis * timeStep;
+
+  Vector orientacionAng = {pitch, roll, yaw};
 
   // Output raw
-  Serial.print(norm.XAxis);
+  Serial.print(velocidadAng.XAxis);
   Serial.print(":");
-  Serial.print(norm.YAxis);
+  Serial.print(velocidadAng.YAxis);
   Serial.print(":");
-  Serial.print(norm.ZAxis);
+  Serial.print(velocidadAng.ZAxis);
   Serial.print(":");
-  Serial.print(pitch);
+  Serial.print(orientacionAng.XAxis);
   Serial.print(":");
-  Serial.print(roll);
+  Serial.print(orientacionAng.YAxis);
   Serial.print(":");
-  Serial.println(yaw);
-
+  Serial.print(orientacionAng.ZAxis);
+  Serial.print(":");
+  Serial.print(1750);
+  Serial.print(":");
+  Serial.print(1500);
+  Serial.print(":");
+  Serial.print(1800);
+  Serial.print(":");
+  Serial.println(1600);
+  
   // Output indicator
   if (Blink)
   {
@@ -84,5 +89,5 @@ void loop()
   Blink = !Blink;
 
   // Wait to full timeStep period
-  delay((timeStep*1000) - (millis() - timer));
+  delay((timeStep * 1000) - (millis() - timer));
 }
