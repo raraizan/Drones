@@ -45,9 +45,7 @@ void draw() {
   drawChart("PWD [ms]", PWDSeries, PWDValues, 10, 2 * height / 3 + 10, width / 2 - 20, height / 3  - 20, true, true, 1500, 2000, 100);
   drawBarChart("PWD [ms]", PWDSeries, PWDValues, width / 2 + 10, 2 * height / 3 + 10, height / 3  - 20, height / 3  - 20, true, true, 1500, 2000, 100);
   
-  int side = max(width / 4 - 20, height / 2 - 20);
-  
-  drawRotationCube(width / 2 + 10, 10, side, side);
+  drawRotationCube(width / 2 + 10, 10, 2 * height / 3 - 20, 2 * height / 3 - 20);
 
   println(mouseX, mouseY);
 }

@@ -90,11 +90,11 @@ void drawChart(String title, String[] series, float[][] chart, int x, int y, int
 
   for (float t = min; t <= max; t = t + step) {
     float line = map(t, min, max, 30, h - 30);
-    pgChart.line(40, h - line, w - 20, h - line);
+    pgChart.line(45, h - line, w - 20, h - line);
     pgChart.fill(200, 200, 200);
     pgChart.textSize(12);
     pgChart.textAlign(RIGHT, CENTER);
-    pgChart.text(int(t), 35, h - line);
+    pgChart.text(int(t), 40, h - line);
   }
 
   // Draw data series
@@ -119,7 +119,7 @@ void drawChart(String title, String[] series, float[][] chart, int x, int y, int
       float v0 = map(d0, min, max, 30, h - 30);
       float v1 = map(d1, min, max, 30, h - 30);
       
-      pgChart.line(((i - 1) * sampleStep) + 40, h - v0, (i * sampleStep) + 40, h - v1);
+      pgChart.line(((i - 1) * sampleStep) + 45, h - v0, (i * sampleStep) + 45, h - v1);
 
       actualColor++;
 
