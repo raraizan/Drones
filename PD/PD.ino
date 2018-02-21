@@ -56,6 +56,8 @@ void loop() {
 
   Vector orientacionAng = {pitch, roll, yaw};
 
+  Vector target = {0, 0, 0};
+
   // Output raw
   Serial.print(velocidadAng.XAxis);
   Serial.print(":");
