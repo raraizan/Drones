@@ -34,20 +34,21 @@ void setup() {
   // Serial
   myPort = new Serial(this, Serial.list()[0], 115200);
   myPort.bufferUntil(10);
+  stroke(255);
 }
 
 void draw() {
-  if (!hasData) return;
-  background(0);
 
-  drawChart("Velocidad Angular [deg/sec]", gyroscopeSeries, gyroscopeValues, 10, 10, width / 2 - 20, height / 3  - 20, true, true, -2000, 2000, 500);
-  drawChart("Angulos [deg]", pyrSeries, pyrValues, 10, height / 3 + 10, width / 2 - 20, height / 3  - 20, true, true, -180, 180, 60);
-  drawChart("PWD [ms]", PWDSeries, PWDValues, 10, 2 * height / 3 + 10, width / 2 - 20, height / 3  - 20, true, true, 1500, 2000, 100);
-  drawBarChart("PWD [ms]", PWDSeries, PWDValues, width / 2 + 10, 2 * height / 3 + 10, height / 3  - 20, height / 3  - 20, true, true, 1500, 2000, 100);
-  
-  int side = max(width / 4 - 20, height / 2 - 20);
-  
-  drawRotationCube(width / 2 + 10, 10, side, side);
 
-  println(mouseX, mouseY);
+  //if (hasData) return;
+    background(0);
+
+    drawChart("Velocidad Angular [deg/sec]", gyroscopeSeries, gyroscopeValues, 10, 10, width / 2 - 20, height / 3  - 20, true, true, -2000, 2000, 500);
+    drawChart("Angulos [deg]", pyrSeries, pyrValues, 10, height / 3 + 10, width / 2 - 20, height / 3  - 20, true, true, -180, 180, 60);
+    drawChart("PWD [ms]", PWDSeries, PWDValues, 10, 2 * height / 3 + 10, width / 2 - 20, height / 3  - 20, true, true, 1500, 2000, 100);
+    drawBarChart("PWD [ms]", PWDSeries, PWDValues, width / 2 + 10, 2 * height / 3 + 10, height / 3  - 20, height / 3  - 20, true, true, 1500, 2000, 100);
+
+    int side = max(width / 4 - 20, height / 2 - 20);
+
+    drawRotationCube(width / 2 + 10, 10, side, side);
 }

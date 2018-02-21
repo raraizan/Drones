@@ -9,7 +9,7 @@ void drawChart(String title, String[] series, float[][] chart, int x, int y, int
   int max = 0;
   int step = 0;
   int divide = 0;
-  
+
   if (fixed) {
     min = fixedMin;
     max = fixedMax;
@@ -75,16 +75,16 @@ void drawChart(String title, String[] series, float[][] chart, int x, int y, int
     pgChart.fill(colors[actualColor]);
     pgChart.textAlign(LEFT, CENTER);
     pgChart.text(Description[j], w / 2 - DesctiptionTotalWidth / 2 + DescriptionOffset, h - 15);
-    
-    
+
+
     DescriptionOffset += DescriptionWidth[j];
     actualColor++;
     if (actualColor >= colors.length) actualColor = 0;
   }
-  
+
   // linea vertical al medio de la pantalla para composicion
   //pgChart.line(pgChart.width / 2, 0, pgChart.width / 2, pgChart.height);
-  
+
   // Draw H-Lines 
   pgChart.stroke(100);
 
@@ -118,7 +118,7 @@ void drawChart(String title, String[] series, float[][] chart, int x, int y, int
 
       float v0 = map(d0, min, max, 30, h - 30);
       float v1 = map(d1, min, max, 30, h - 30);
-      
+
       pgChart.line(((i - 1) * sampleStep) + 40, h - v0, (i * sampleStep) + 40, h - v1);
 
       actualColor++;
