@@ -38,21 +38,18 @@ void setup() {
 }
 
 void draw() {
-<<<<<<< HEAD
-
 
   //if (hasData) return;
-    background(0);
+  background(0);
 
-    drawChart("Velocidad Angular [deg/sec]", gyroscopeSeries, gyroscopeValues, 10, 10, width / 2 - 20, height / 3  - 20, true, true, -2000, 2000, 500);
-    drawChart("Angulos [deg]", pyrSeries, pyrValues, 10, height / 3 + 10, width / 2 - 20, height / 3  - 20, true, true, -180, 180, 60);
-    drawChart("PWD [ms]", PWDSeries, PWDValues, 10, 2 * height / 3 + 10, width / 2 - 20, height / 3  - 20, true, true, 1500, 2000, 100);
-    drawBarChart("PWD [ms]", PWDSeries, PWDValues, width / 2 + 10, 2 * height / 3 + 10, height / 3  - 20, height / 3  - 20, true, true, 1500, 2000, 100);
+  drawChart("Velocidad Angular [deg/sec]", gyroscopeSeries, gyroscopeValues, 10, 10, width / 2 - 20, height / 3  - 20, true, true, -2000, 2000, 500);
+  drawChart("Angulos [deg]", pyrSeries, pyrValues, 10, height / 3 + 10, width / 2 - 20, height / 3  - 20, true, true, -180, 180, 60);
+  drawChart("PWD [ms]", PWDSeries, PWDValues, 10, 2 * height / 3 + 10, width / 2 - 20, height / 3  - 20, true, true, 1500, 2000, 100);
+  drawBarChart("PWD [ms]", PWDSeries, PWDValues, width / 2 + 10, 2 * height / 3 + 10, height / 3  - 20, height / 3  - 20, true, true, 1500, 2000, 100);
 
-    int side = max(width / 4 - 20, height / 2 - 20);
+  int side = max(width / 4 - 20, height / 2 - 20);
 
-    drawRotationCube(width / 2 + 10, 10, side, side);
-=======
+  drawRotationCube(width / 2 + 10, 10, side, side);
   if (!hasData) return;
   background(0);
 
@@ -60,9 +57,8 @@ void draw() {
   drawChart("Angulos [deg]", pyrSeries, pyrValues, 10, height / 3 + 10, width / 2 - 20, height / 3  - 20, true, true, -180, 180, 60);
   drawChart("PWD [ms]", PWDSeries, PWDValues, 10, 2 * height / 3 + 10, width / 2 - 20, height / 3  - 20, true, true, 1500, 2000, 100);
   drawBarChart("PWD [ms]", PWDSeries, PWDValues, width / 2 + 10, 2 * height / 3 + 10, height / 3  - 20, height / 3  - 20, true, true, 1500, 2000, 100);
-  
+
   drawRotationCube(width / 2 + 10, 10, 2 * height / 3 - 20, 2 * height / 3 - 20);
 
   println(mouseX, mouseY);
->>>>>>> 29f642fb7d0e49ed2a13f5128cebc1c84c9bcaa2
 }

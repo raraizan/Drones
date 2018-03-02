@@ -118,13 +118,9 @@ void drawChart(String title, String[] series, float[][] chart, int x, int y, int
 
       float v0 = map(d0, min, max, 30, h - 30);
       float v1 = map(d1, min, max, 30, h - 30);
-<<<<<<< HEAD
-
       pgChart.line(((i - 1) * sampleStep) + 40, h - v0, (i * sampleStep) + 40, h - v1);
-=======
       
       pgChart.line(((i - 1) * sampleStep) + 45, h - v0, (i * sampleStep) + 45, h - v1);
->>>>>>> 29f642fb7d0e49ed2a13f5128cebc1c84c9bcaa2
 
       actualColor++;
 

@@ -39,7 +39,7 @@ void setup() {
   // Calibrate gyroscope. The calibration must be at rest.
   // If you don't want calibrate, comment this line.
   gyroscope.calibrate(100);
-  gyroscope.setThreshold(5);
+//  gyroscope.setThreshold(5);
   digitalWrite(LED_BUILTIN, HIGH);
 }
 
